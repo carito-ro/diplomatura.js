@@ -9,7 +9,7 @@ Para ejecutar el codigo, hacemos lo siguiente:
 - Instalamos las dependencias
 
   ```bash
-  npm install
+  cd 
   ```
 
 - Para correr el programa

@@ -1,5 +1,5 @@
 # Ejercicios 003: Objetos y programación asincrónica
-
+# npm install npm run watch
 - Crear un archivo dentro de `./src` para cada ejercicio. Por ejemplo .`/src/1.collection.js`
 - Cada archivo corresponde a un módulo que exporte sólo las clases y/o funciones requeridas
 - Utilizar `./src/index.js` para importar las clases/funciones y mostrar resultados por consola
@@ -16,7 +16,8 @@ Escribir una clase Collection que representa una colección de elementos. Esta c
 
 ## 2. Vector (_TAREA PARA EL HOGAR_)
 
-Escribir una clase Vector que represente un espacio de dos dimensiones x e y. Esta clase debe:
+Escribir una clase Vector que represente un espacio de dos dimensiones x e y. 
+Esta clase debe:
 
 - Poder construirse desde dos valores `x` e `y`
 - Debe tener dos getters para obtener esos valores

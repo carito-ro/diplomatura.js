@@ -27,7 +27,7 @@ DELETE -> Método Delete
 
 ## Especificaciones
 
-Los 4 endpoints (alumnos, profesores, ...) deben responder a las siguientes peticiones. El resultado debe ser en formato JSON.
+Los 4 endpoints (alumnos, profesores, materias y calificaciones) deben responder a las siguientes peticiones. El resultado debe ser en formato JSON.
 
 **GET http://localhost:8080/alumnos**
 

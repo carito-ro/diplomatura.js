@@ -2,12 +2,6 @@ import React from 'react';
 
 class ListaMaterias extends React.Component {
 
-    /** data tiene los datos de materias
-     * delete elimina por id 
-     */
-    // delete(id) {
-    //     this.props.delete(id);
-    // }
     render() {
         return (
             <>

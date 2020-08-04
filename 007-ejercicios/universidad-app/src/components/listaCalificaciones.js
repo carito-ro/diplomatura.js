@@ -2,12 +2,6 @@ import React from 'react';
 
 class ListaCalificaciones extends React.Component {
 
-    /** data tiene los datos de alumnos
-     * delete elimina por id 
-     */
-    // delete(id) {
-    //     this.props.delete(id);
-    // }
     render() {
         return (
             <>

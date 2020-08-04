@@ -33,6 +33,5 @@ class MainView extends React.Component {
     asignarNuevoEstado(newState) {
         this.setState(newState);
     }
-
 }
 export default MainView;

@@ -2,9 +2,6 @@ import React from 'react';
 
 class ListaAlumnos extends React.Component {
 
-    /** data tiene los datos de alumnos
-     * delete elimina por id 
-     */
     render() {
         return (
             <>

@@ -20,10 +20,9 @@ class ListaMaterias extends React.Component {
         )
     }
     eliminarMaterias(id) {
-        let newState = this.props.data;
-        let newMaterias = this.props.data.materias.filter(el => el.id !== id);
-        newState.materias = newMaterias;
-        this.props.deleteElto(newState);
+        let { materias } = this.props.data;
+        materias = materias.filter(el => el.id !== id);
+        this.props.deleteElto({ materias });
     }
 }
 

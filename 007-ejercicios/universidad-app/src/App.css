@@ -10,8 +10,26 @@
 .App-link {
   color: #61dafb;
 }
-
+.addBottom{
+    text-align: end;
+    padding: 1rem;
+}
+.backBottom{
+    text-align: left;
+    padding: 1rem 0;
+}
 #botonera {
   display: flex;
   justify-content: space-evenly;
 }
+ul{
+     padding: 1rem;
+    margin: 0px;
+   
+}
+.p-1{
+padding-top: 1rem !important;
+}
+ .row {
+      margin: 0px !important;
+    }

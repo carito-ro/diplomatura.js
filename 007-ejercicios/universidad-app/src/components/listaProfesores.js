@@ -20,10 +20,9 @@ class ListaProfesores extends React.Component {
         )
     }
     eliminarProfesores(id) {
-        let newState = this.props.data;
-        let newProfesores = this.props.data.profesores.filter(el => el.id !== id);
-        newState.profesores = newProfesores;
-        this.props.deleteElto(newState);
+        let { profesores } = this.props.data;
+        profesores = profesores.filter(el => el.id !== id);
+        this.props.deleteElto({ profesores });
     }
 }
 

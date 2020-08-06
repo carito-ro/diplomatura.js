@@ -4,7 +4,7 @@ class ListaCalificaciones extends React.Component {
 
     render() {
         return (
-            <>
+            <div>
                 {
                     this.calificacionesString(this.props.data).map(
                         (elto) =>
@@ -16,7 +16,7 @@ class ListaCalificaciones extends React.Component {
                             </a>
                     )
                 }
-            </>
+            </div>
         )
     }
     calificacionesString(data) {
@@ -33,10 +33,9 @@ class ListaCalificaciones extends React.Component {
         return arr;
     }
     eliminarCalificacion(id) {
-        let newState = this.props.data;
-        let newCalificaciones = this.props.data.calificaciones.filter(el => el.id !== id);
-        newState.calificaciones = newCalificaciones;
-        this.props.deleteElto(newState);
+        let { calificaciones } = this.props.data;
+        calificaciones = calificaciones.filter(el => el.id !== id);
+        this.props.deleteElto({ calificaciones });
     }
 }
 

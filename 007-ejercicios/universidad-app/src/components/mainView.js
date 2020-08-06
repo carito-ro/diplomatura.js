@@ -4,24 +4,33 @@ import ListaAlumnos from './listaAlumnos';
 import ListaCalificaciones from './listaCalificaciones';
 import ListaMaterias from './listaMaterias';
 import ListaProfesores from './listaProfesores';
+import helpers from '../datos/helpers';
 
 class MainView extends React.Component {
-    constructor(data) {
-        super(data);
+    constructor(lista) {
+        super(lista);
         this.state = {
             alumnos: datos.alumnos,
             profesores: datos.profesores,
             materias: datos.materias,
             calificaciones: datos.calificaciones,
         };
+        this.insertar = this.insertar.bind(this);
+    }
+    insertar(name, elto) {
+        elto.id = (helpers.ultimoId(this.state?.[name])) + 1;
+        if (name) this.setState({ [name]: [...this.state?.[name], elto] });
     }
     render() {
         let vistaActual = this.props.data.vistaActual;
         switch (vistaActual) {
             case 'alumnos':
-                return <ul> <ListaAlumnos data={this.state} deleteElto={this.asignarNuevoEstado.bind(this)} /> </ul>;
+                return <ListaAlumnos data={this.state}
+                    deleteElto={this.asignarNuevoEstado.bind(this)}
+                    insertar={this.insertar} />;
             case 'profesores':
-                return <ul> <ListaProfesores data={this.state} deleteElto={this.asignarNuevoEstado.bind(this)} /> </ul>;
+                return <ul> <ListaProfesores data={this.state}
+                    deleteElto={this.asignarNuevoEstado.bind(this)} /> </ul>;
             case 'materias':
                 return <ul> <ListaMaterias data={this.state} deleteElto={this.asignarNuevoEstado.bind(this)} /> </ul>;
             case 'calificaciones':
